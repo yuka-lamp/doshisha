@@ -5,6 +5,11 @@
   width: 1000px
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
 .pc-flex {
   display: flex;
   justify-content: space-between;
@@ -12,6 +17,10 @@
 
 .sp-flex {
   display: block;
+}
+
+.flex-center {
+  align-items: center;
 }
 
 .sec {
@@ -45,14 +54,17 @@
 }
 
 @media(max-width:480px) {
+
   /*--スマホたて--*/
   .pc-flex {
     display: block;
   }
+
   .sp-flex {
     display: flex;
     justify-content: space-between;
   }
+
   .pc-only {
     display: none !important
   }
@@ -71,12 +83,25 @@
   opacity: .5
 }
 
+.fff {
+  color: #fff
+}
+
 .yellow {
   color: yellow
 }
 
 .red {
   color: red
+}
+
+.eng {
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: .3rem;
+}
+
+.upper {
+  text-transform: uppercase;
 }
 
 /*--------------------------------------余白*/
