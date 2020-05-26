@@ -21,10 +21,10 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- ヘッダー -->
 <header id="header">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="flex" href="<?php echo $home; ?>/">
+    <div class="container flex">
+      <a class="flex flex-center logo" href="<?php echo $home; ?>/">
         <img src="<?php echo $wp_url; ?>/lib/images/common/logo_fff.svg" alt="同志社大学中小企業マネジメント研究センターのロゴ">
-        <p class="fff">中小企業<br>マネジメント研究センター</p>
+        <p class="fff b">中小企業<br>マネジメント研究センター</p>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@ $wp_url = get_template_directory_uri(); ?>
   <div class="content txt-c">
     <p class="fff">中小企業の発展に<br class="sp-only">貢献しようとする
       <br>日本全国の若手の<br class="sp-only">中小企業研究者を育成</p>
-    <p class="eng fff">Training young SME researchers throughout Japan.</p>
+    <p class="eng fff">Training young<br class="sp-only"> SME researchers<br class="sp-only"> throughout Japan.</p>
   </div>
 </section>
 <!-- トップページMV終了 -->

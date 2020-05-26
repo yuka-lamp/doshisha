@@ -56,6 +56,17 @@
 
   /*--スマホたて--*/
   #mv .content {
-    width: 90%;
+    width: 80%;
+  }
+  #mv .content p {
+    font-size: 1.3rem;
+  }
+  #mv .content p.eng {
+    font-size: .8rem;
+    line-height: 1.5rem;
   }
 }
+
+/*--------------------------------------
+#mv
+--------------------------------------*/
