@@ -21,10 +21,10 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- ヘッダー -->
 <header id="header">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="flex" href="<?php echo $home; ?>/">
+    <div class="container flex">
+      <a class="flex flex-center logo" href="<?php echo $home; ?>/">
         <img src="<?php echo $wp_url; ?>/lib/images/common/logo_fff.svg" alt="同志社大学中小企業マネジメント研究センターのロゴ">
-        <p class="fff">中小企業<br>マネジメント研究センター</p>
+        <p class="fff b">中小企業<br>マネジメント研究センター</p>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
