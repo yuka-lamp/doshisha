@@ -4,6 +4,8 @@ $wp_url = get_template_directory_uri(); ?>
 </main>
 <!-- メインコンテンツ終了 -->
 
+<!-- <?php get_template_part('sec-link'); ?> -->
+
 <!-- フッター -->
 <footer id="footer">
   <div class="wrap">

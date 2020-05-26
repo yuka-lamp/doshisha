@@ -10,6 +10,7 @@ $wp_url = get_template_directory_uri(); ?>
 <link href="<?php echo $wp_url; ?>/lib/css/common.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/header.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/footer.css" rel="stylesheet">
+<link href="<?php echo $wp_url; ?>/lib/css/sec-link.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/top.css" rel="stylesheet">
 <?php wp_head(); ?>
 <?php if (!is_user_logged_in()): ?>
