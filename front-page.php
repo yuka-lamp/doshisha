@@ -6,7 +6,7 @@ get_header(); ?>
 <div class="wrap">
   <div class="flex">
     <h2 class="ttl2"><span class="eng upper">NEWS</span>ニュース</h2>
-    <div class="btn-nomal">
+    <div class="pc-only btn-nomal">
       <a class="eng upper"href="<?php echo $home; ?>/news">view more</a>
     </div>
   </div>
@@ -34,6 +34,9 @@ get_header(); ?>
     <?php endforeach; ?>
     <?php endif; wp_reset_postdata(); ?>
   </ul>
+  <div class="sp-only btn-border">
+    <a class="eng upper"href="<?php echo $home; ?>/news">view more</a>
+  </div>
 </div>
 </section>
 
