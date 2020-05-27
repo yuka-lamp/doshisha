@@ -60,6 +60,10 @@
   letter-spacing: .3rem;
 }
 
+.scroll-on .navbar-light .navbar-toggler-icon, .sub .navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important
+}
+
 @media(max-width:480px) {
 
   /*--スマホたて--*/
@@ -75,17 +79,6 @@
     font-size: .8rem;
     line-height: 1.5rem;
   }
-}
-
-/*--------------------------------------
-下層ページ・スクロール　ヘッダー
---------------------------------------*/
-#header.scroll-on .logo p, #header.sub .logo p,#header.scroll-on ul li a, #header.sub ul li a{
-  color: #000;
-}
-
-#header.scroll-on, #header.sub {
-  background: #fff;
 }
 
 /*--------------------------------------

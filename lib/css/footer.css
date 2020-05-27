@@ -20,3 +20,17 @@
 #footer .under ul li {
   font-size: .9rem
 }
+
+@media(max-width:480px) {
+  #footer {
+    padding: 3rem 0
+  }
+  #footer .under {
+    flex-wrap: wrap;
+  }
+  #footer .under ul {
+    flex-wrap: wrap;
+    justify-content: normal;
+    margin-bottom: 1rem
+  }
+}

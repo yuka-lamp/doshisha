@@ -54,7 +54,7 @@ get_header(); ?>
     <?php foreach ($posts as $post): setup_postdata($post);
     ?>
     <li>
-      <a href="#">
+      <a href="<?php the_permalink(); ?>">
         <div class="img-wrap">
           <img src="<?php echo $wp_url; ?>/lib/images/top/sample.png" alt="タイトル">
         </div>

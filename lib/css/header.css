@@ -56,3 +56,40 @@
     margin: 0 0 0 10px;
   }
 }
+
+/*--------------------------------------
+メニュー開
+--------------------------------------*/
+.navbar-light .navbar-toggler {
+  border: none
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important
+}
+
+@media(max-width:960px) {
+  #header ul {
+    margin-top: 1rem!important
+  }
+
+  #header ul li a {
+    text-align: center;
+    padding: 1rem 0;
+    background: #fff;
+  }
+  #header.main ul li a {
+    color: #000
+  }
+}
+
+/*--------------------------------------
+下層ページ・スクロール　ヘッダー
+--------------------------------------*/
+#header.scroll-on .logo p, #header.sub .logo p, #header.scroll-on ul li a, #header.sub ul li a, .show .logo p, .show ul li a {
+  color: #000;
+}
+
+#header.scroll-on, #header.sub {
+  background: #fff;
+}

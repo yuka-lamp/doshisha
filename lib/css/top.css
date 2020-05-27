@@ -53,6 +53,18 @@
   letter-spacing: .3rem;
 }
 
+@media(max-width:1025px) {
+  #mv .content {
+    width: 70%;
+  }
+}
+
+@media(max-width:980px) {
+  #mv .content {
+    width: 80%;
+  }
+}
+
 @media(max-width:480px) {
 
   /*--スマホたて--*/
@@ -103,21 +115,22 @@
   letter-spacing: 0rem;
 }
 
-#top-news ul li div p.cat a{
-  color: #fff!important;
+#top-news ul li div p.cat a {
+  color: #fff !important;
 }
 
 #top-news ul li>a>p {
   font-size: .9rem;
   font-weight: bold;
-  color: #000!important;
+  color: #000 !important;
   margin: 0
 }
+
+@media(max-width:480px) {}
 
 /*--------------------------------------
 #top-research
 --------------------------------------*/
-
 #top-research {
   border-top: 1px solid #EAEFF4
 }
@@ -161,4 +174,14 @@
   letter-spacing: .2rem;
   line-height: 1.3rem;
   color: #000
+}
+
+@media(max-width:480px) {
+  #top-research ul {
+    flex-wrap: wrap;
+  }
+  #top-research ul li {
+    width: 100%;
+    margin-bottom: 2rem
+  }
 }
