@@ -49,6 +49,20 @@
   text-align: center
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+a {
+  cursor: pointer!important
+}
+
+a:hover {
+  text-decoration: none!important
+}
+
 @media(max-width:1025px) {
   /*--スマホよこ--*/
 }
@@ -291,4 +305,86 @@
 
 .ml-05 {
   margin-left: .5rem
+}
+
+/*--------------------------------------ボタン*/
+.btn-nomal, .btn-border {
+  padding: 0
+}
+
+.btn-nomal a, .btn-border a {
+  color: #333 !important;
+  padding: .5rem 1.5rem .5rem 0;
+  position: relative;
+  display: block;
+  font-weight: bold;
+}
+
+.btn-nomal a:hover, .btn-border a:hover {
+  text-decoration: none;
+}
+
+.btn-nomal a::after, .btn-border a::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(45deg);
+  transition: .5s
+}
+
+.btn-nomal a:hover::after, .btn-border a:hover::after {
+  right: -10px;
+}
+
+/*--.btn-border--*/
+
+.btn-border {
+  width: 300px;
+  border: 1px solid #000;
+  margin: 3rem auto 0 auto;
+  transition: .5s
+}
+
+.btn-border a {
+  padding: 1rem 0;
+  text-align: center;
+  color: #000!important
+}
+
+.btn-border a::after {
+  right: 20px;
+}
+
+.btn-border:hover {
+  background: #000;
+}
+
+.btn-border a:hover {
+  color: #fff!important
+}
+
+.btn-nomal a:hover::after, .btn-border a:hover::after {
+  right: 10px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff
+}
+
+/*--------------------------------------見出し*/
+.ttl2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0 0 3rem 0;
+  letter-spacing: .3rem
+}
+
+.ttl2 .eng {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+  letter-spacing: .3rem
 }
