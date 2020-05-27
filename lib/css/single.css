@@ -2,7 +2,7 @@
 #single
 --------------------------------------*/
 #single p, #single h2, #single h3, #single h4, #single ul li, #single table td, #single time {
-  line-height: 1.5rem;
+  line-height: 1.7rem;
   letter-spacing: .1rem
 }
 
@@ -56,4 +56,33 @@
 #single table td {
   border: 1px solid #EAEFF4;
   padding: 1rem;
+}
+
+#single .thumbnail {
+  margin-bottom: 2rem;
+  width: auto;
+  height: 244px
+}
+
+#single a {
+  color: #7E13AB;
+  text-decoration: underline;
+}
+
+#single a:hover {
+  text-decoration: underline!important;
+}
+
+#single a[target="_blank"]::after {
+  content: '';
+  background-image: url('../images/common/newtab.png');
+  background-size: cover;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 0 0 5px
+}
+
+#single .thumbnail img {
+  height: 100%;
 }

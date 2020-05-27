@@ -26,7 +26,7 @@ get_header(); ?>
       <a href="<?php the_permalink(); ?>">
         <div class="">
           <p><?php the_time('Y-m-d'); ?></p>
-          <p class="cat">></p>
+          <p class="cat">お知らせ</p>
         </div>
         <p><?php the_title(); ?></p>
       </a>
@@ -49,10 +49,9 @@ get_header(); ?>
       'posts_per_page' => 3,
       'orderby' => 'date',
       'order' => 'DESC',
-      'post_type' => 'news',
+      'post_type' => 'research',
     );
     $posts = get_posts($arg);
-    $terms = get_terms( 'news-cat');
     if ($posts): ?>
     <?php foreach ($posts as $post): setup_postdata($post);
     ?>

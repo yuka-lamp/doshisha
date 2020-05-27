@@ -18,6 +18,11 @@ $categories = get_the_terms($post_id, 'custom_category');
 <section id="single" class="sec">
 <div class="wrap">
 <time datetime="<?php the_time('Y-m-d'); ?>">&nbsp;<?php the_time('Y.m.d'); ?></time>
+<?php if ($i != ''): ?>
+<div class="thumbnail">
+<img src="<?php echo $i; ?>" alt="<?php echo $t; ?>">
+</div>
+<?php endif; ?>
 <div class="post-inner mt-1">
 <?php the_content(); ?>
 </div>

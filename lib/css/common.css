@@ -63,6 +63,11 @@ a:hover {
   text-decoration: none!important
 }
 
+p {
+  line-height: 1.7rem;
+  letter-spacing: .1rem
+}
+
 @media(max-width:1025px) {
   /*--スマホよこ--*/
   .wrap {
