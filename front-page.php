@@ -11,33 +11,28 @@ get_header(); ?>
     </div>
   </div>
   <ul>
+    <?php
+    $arg = array(
+      'posts_per_page' => 4,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post_type' => 'news',
+    );
+    $posts = get_posts($arg);
+    if ($posts): ?>
+    <?php foreach ($posts as $post): setup_postdata($post);
+    ?>
     <li>
-      <a href="<?php echo $home; ?>/news">
+      <a href="<?php the_permalink(); ?>">
         <div class="">
-          <p>2020.01.01</p>
-          <p class="cat">お知らせ</p>
+          <p><?php the_date(); ?></p>
+          <p class="cat"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_term_list($post->ID,'news_cat'); ?></a></p>
         </div>
-        <p>おしらせないよう</p>
+        <p><?php the_title(); ?></p>
       </a>
     </li>
-    <li>
-      <a href="<?php echo $home; ?>/news">
-        <div class="">
-          <p class="eng">2020.01.01</p>
-          <p class="cat">お知らせ</p>
-        </div>
-        <p>おしらせないよう</p>
-      </a>
-    </li>
-    <li>
-      <a href="<?php echo $home; ?>/news">
-        <div class="">
-          <p>2020.01.01</p>
-          <p class="cat">お知らせ</p>
-        </div>
-        <p>おしらせないよう</p>
-      </a>
-    </li>
+    <?php endforeach; ?>
+    <?php endif; wp_reset_postdata(); ?>
   </ul>
 </div>
 </section>
@@ -46,6 +41,18 @@ get_header(); ?>
 <div class="wrap">
   <h2 class="ttl2"><span class="eng upper">research</span>研究コラム・成果</h2>
   <ul class="flex">
+    <?php
+    $arg = array(
+      'posts_per_page' => 3,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post_type' => 'news',
+    );
+    $posts = get_posts($arg);
+    $terms = get_terms( 'news-cat');
+    if ($posts): ?>
+    <?php foreach ($posts as $post): setup_postdata($post);
+    ?>
     <li>
       <a href="#">
         <div class="img-wrap">
@@ -55,7 +62,8 @@ get_header(); ?>
         <h3>日本人の胃がんリスクとなる遺伝的背景と生活習慣～人種横断的大規模胃がんゲノム解析の成果～</h3>
       </a>
     </li>
-
+    <?php endforeach; ?>
+    <?php endif; wp_reset_postdata(); ?>
   </ul>
   <div class="btn-border">
     <a class="eng upper"href="<?php echo $home; ?>/research">view more</a>
