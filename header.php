@@ -81,11 +81,23 @@ $wp_url = get_template_directory_uri(); ?>
     }
   } ?>
   <?php endif; ?>
+  <?php
+  global $wp_query;
+  $post_obj = $wp_query->get_queried_object();
+  $slug = $post_obj->post_name;
+  ?>
   <!-- パンくず終了 -->
   <div class="flex flex-center">
     <div class="content txt-c">
+      <?php if (is_post_type_archive('news')): ?>
+      <h2 class="serif fff">ニュース</h2>
+    <?php elseif (is_post_type_archive('research')): ?>
+      <h2 class="serif fff">研究コラム・成果</h2>
+    <?php else: ?>
       <h2 class="serif fff"><?php echo get_the_title(); ?></h2>
-      <p class="eng fff"><?php echo $slug; ?></p>
+      <?php endif; ?>
+      </h2>
+      <!-- <p class="eng fff"><?php echo $slug; ?></p> -->
     </div>
   </div>
 </section>

@@ -42,7 +42,7 @@
   color: #fff;
 }
 
-@media(max-width:480px) {
+@media(max-width:1025px) {
   #header .logo img {
     width: 130px
   }

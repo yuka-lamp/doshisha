@@ -3,7 +3,7 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
-<section id="top-news" class="sec">
+<section id="top-research" class="sec">
 <div class="wrap">
   <ul class="flex">
     <?php if (have_posts()): while (have_posts()):
