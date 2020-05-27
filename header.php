@@ -8,6 +8,7 @@ $wp_url = get_template_directory_uri(); ?>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/common.css" rel="stylesheet">
+<link href="<?php echo $wp_url; ?>/lib/css/under-common.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/header.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/footer.css" rel="stylesheet">
 <link href="<?php echo $wp_url; ?>/lib/css/sec-link.css" rel="stylesheet">
@@ -21,11 +22,20 @@ $wp_url = get_template_directory_uri(); ?>
 <body>
 
 <!-- ヘッダー -->
-<header id="header">
+<header id="header" class="
+  <?php if (is_home() || is_front_page()): ?>
+  main
+  <?php else: ?>
+  sub
+  <?php endif; ?>">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container flex">
       <a class="flex flex-center logo" href="<?php echo $home; ?>/">
-        <img src="<?php echo $wp_url; ?>/lib/images/common/logo_fff.svg" alt="同志社大学中小企業マネジメント研究センターのロゴ">
+        <?php if (is_home() || is_front_page()): ?>
+          <img src="<?php echo $wp_url; ?>/lib/images/common/logo_fff.svg" alt="同志社大学中小企業マネジメント研究センターのロゴ">
+          <?php else: ?>
+          <img src="<?php echo $wp_url; ?>/lib/images/common/logo_color.svg" alt="同志社大学中小企業マネジメント研究センターのロゴ">
+          <?php endif; ?>
         <p class="fff b">中小企業<br>マネジメント研究センター</p>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,22 +72,26 @@ $wp_url = get_template_directory_uri(); ?>
 
 <!-- 下層ページMV -->
 <section id="sub-mv">
-  <div class="content">
-    <p class="eng"><?php echo $slug; ?></p>
-    <h2 class="serif"><?php echo get_the_title(); ?></h2>
+  <!-- パンくず -->
+  <?php if (is_home() || is_front_page()): ?>
+  <?php else: ?>
+  <?php if (!is_front_page() && !is_home()) {
+  if (function_exists('yoast_breadcrumb')) {
+      yoast_breadcrumb('<div id="breadcrumbs" class="pc">','</div>');
+    }
+  } ?>
+  <?php endif; ?>
+  <!-- パンくず終了 -->
+  <div class="flex flex-center">
+    <div class="content txt-c">
+      <h2 class="serif fff"><?php echo get_the_title(); ?></h2>
+      <p class="eng fff"><?php echo $slug; ?></p>
+    </div>
   </div>
 </section>
 <!-- 下層ページMV終了 -->
 
 <?php endif; ?>
-
-<!-- パンくず -->
-<?php if (!is_front_page() && !is_home()) {
-if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('<div id="breadcrumbs" class="pc">','</div>');
-  }
-} ?>
-<!-- パンくず終了 -->
 
 <!-- メインコンテンツ -->
 <main>

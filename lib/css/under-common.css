@@ -1,0 +1,109 @@
+/*--------------------------------------
+#sub-mv
+--------------------------------------*/
+#sub-mv {
+  background: url('../images/top/mv.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 270px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 100px;
+  margin-bottom: 100px
+}
+
+#sub-mv>div.flex {
+  height: 100%;
+}
+
+#sub-mv .content {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+#sub-mv .content::before, #sub-mv .content::after {
+  content: '';
+  display: block;
+  width: 27px;
+  height: 27px;
+  transform: rotate(-45deg);
+}
+
+#sub-mv .content::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #fff;
+}
+
+#sub-mv .content::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #fff;
+}
+
+#sub-mv .content h2 {
+  font-size: 1.75rem;
+  letter-spacing: .3rem;
+  margin: 0
+}
+
+#sub-mv .content p.eng {
+  font-size: 1rem;
+  margin-top: 1rem;
+  letter-spacing: .3rem;
+}
+
+@media(max-width:480px) {
+
+  /*--スマホたて--*/
+  #sub-mv .content {
+    width: 80%;
+  }
+
+  #sub-mv .content h2 {
+    font-size: 1.3rem;
+  }
+
+  #sub-mv .content p.eng {
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*--------------------------------------
+下層ページ・スクロール　ヘッダー
+--------------------------------------*/
+#header.scroll-on .logo p, #header.sub .logo p,#header.scroll-on ul li a, #header.sub ul li a{
+  color: #000;
+}
+
+#header.scroll-on, #header.sub {
+  background: #fff;
+}
+
+/*--------------------------------------
+パンくず
+--------------------------------------*/
+#breadcrumbs {
+  width: 100%;
+  padding: .7rem 1.5rem;
+  background: #fff;
+  border-top: 1px solid #EAEFF4;
+  border-bottom: 1px solid #EAEFF4;
+}
+
+#breadcrumbs a {
+  font-size: .8rem;
+  color: #A5ADAE
+}
+
+#breadcrumbs span {
+  font-size: .8rem
+}

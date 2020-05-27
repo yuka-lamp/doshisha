@@ -1,0 +1,164 @@
+/*--------------------------------------
+#mv
+--------------------------------------*/
+#mv {
+  background: url('../images/top/mv.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#mv .content {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+#mv .content::before, #mv .content::after {
+  content: '';
+  display: block;
+  width: 27px;
+  height: 27px;
+  transform: rotate(-45deg);
+}
+
+#mv .content::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #fff;
+}
+
+#mv .content::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #fff;
+}
+
+#mv .content p {
+  font-size: 1.75rem;
+  letter-spacing: .3rem;
+  margin: 0
+}
+
+#mv .content p.eng {
+  font-size: 1rem;
+  margin-top: 1rem;
+  letter-spacing: .3rem;
+}
+
+@media(max-width:480px) {
+
+  /*--スマホたて--*/
+  #mv .content {
+    width: 80%;
+  }
+
+  #mv .content p {
+    font-size: 1.3rem;
+  }
+
+  #mv .content p.eng {
+    font-size: .8rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*--------------------------------------
+#top-news
+--------------------------------------*/
+#top-news ul {}
+
+#top-news ul li {
+  border-bottom: 1px solid #EAEFF4
+}
+
+#top-news ul li>a {
+  display: block;
+  padding: 1.3rem 0;
+}
+
+#top-news ul li:first-child {
+  border-top: 1px solid #EAEFF4
+}
+
+#top-news ul li div p {
+  display: inline-block;
+  color: #A5ADAE;
+  letter-spacing: .1rem;
+  margin: 0 0 10px 0
+}
+
+#top-news ul li div p.cat {
+  font-size: .6rem;
+  background: #7E13AB;
+  padding: 3px 10px;
+  margin: 0 0 0 10px;
+  letter-spacing: 0rem;
+}
+
+#top-news ul li div p.cat a{
+  color: #fff!important;
+}
+
+#top-news ul li>a>p {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #000!important;
+  margin: 0
+}
+
+/*--------------------------------------
+#top-research
+--------------------------------------*/
+
+#top-research {
+  border-top: 1px solid #EAEFF4
+}
+
+#top-research ul li {
+  width: 32%;
+}
+
+#top-research ul li a {
+  display: block;
+}
+
+#top-research ul li .img-wrap {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+#top-research ul li .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s
+}
+
+#top-research ul li:hover .img-wrap img {
+  width: 110%;
+  margin-left: -5%
+}
+
+#top-research ul li .eng {
+  font-size: .8rem;
+  color: #A5ADAE;
+  margin: 1rem 0 .7rem 0
+}
+
+#top-research ul li h3 {
+  font-size: .9rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: .2rem;
+  line-height: 1.3rem;
+  color: #000
+}

@@ -26,6 +26,23 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
 </footer>
 <!-- フッター終了 -->
+<!-- js -->
+<script src="<?php echo $wp_url; ?>/lib/js/jquery.min.js"></script>
+<script src="<?php echo $wp_url; ?>/lib/js/app.js"></script>
+<script type="text/javascript">
+  // Scroll event
+  $(window).on('load scroll', function() {
+    var s = $(window).scrollTop();
+    if (s >= 400) {
+      $('#header').addClass('scroll-on');
+      $('#header.main .logo img').attr('src', '<?php echo $wp_url; ?>/lib/images/common/logo_color.svg');
+    } else {
+      $('#header').removeClass('scroll-on');
+      $('#header.main .logo img').attr('src', '<?php echo $wp_url; ?>/lib/images/common/logo_fff.svg');
+    }
+  });
+</script>
+<!-- js終了 -->
 <?php wp_footer(); ?>
 </body>
 </html>

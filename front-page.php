@@ -25,8 +25,8 @@ get_header(); ?>
     <li>
       <a href="<?php the_permalink(); ?>">
         <div class="">
-          <p><?php the_date(); ?></p>
-          <p class="cat"><a href="<?php echo get_permalink(); ?>"><?php echo get_the_term_list($post->ID,'news_cat'); ?></a></p>
+          <p><?php the_time('Y-m-d'); ?></p>
+          <p class="cat">></p>
         </div>
         <p><?php the_title(); ?></p>
       </a>
